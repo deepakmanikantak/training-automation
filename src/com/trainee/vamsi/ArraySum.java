@@ -14,7 +14,6 @@ public class ArraySum
         System.out.println("enter values");
         for(int i=0;i<n;i++)
         {
-
             ar[i] = s.nextInt();
         }
         for(int k=0;k<n;k++)
