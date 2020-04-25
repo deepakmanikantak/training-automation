@@ -20,7 +20,7 @@ public class PhaniTestClass {
                 System.out.println("Sum of the array is:" + sum);
             }
             catch(Exception e){
-                System.out.println("invalid input pls give valid input");
+                System.out.println("invalid input pls enter valid input");
             }
         }
     }
