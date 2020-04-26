@@ -1,4 +1,5 @@
 package com.trainee.phani;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class PhaniTestClass {
 
@@ -19,7 +20,7 @@ public class PhaniTestClass {
                 }
                 System.out.println("Sum of the array is:" + sum);
             }
-            catch(Exception e){
+            catch(InputMismatchException IME){
                 System.out.println("invalid input pls enter valid input");
             }
         }
