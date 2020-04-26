@@ -1,9 +1,13 @@
 package com.trainee.aizaz.java;
-/*the purpose of this class is to
-show sum of two matrix in array*/
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
+/**
+ * the purpose of this class is to
+ * show sum of two matrix in array
+ *
+ * @author aizaz
+ */
 
 public class SumOfTwoMatrix {
     public static void main(String[] args) {

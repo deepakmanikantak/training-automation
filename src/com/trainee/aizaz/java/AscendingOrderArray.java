@@ -1,10 +1,13 @@
 package com.trainee.aizaz.java;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-/*
-* The purpose of this program is to sort the elemnts in ascending order
-* without predefine functions
-* */
+
+/**
+ * The purpose of this program is to sort the elemnts in ascending order
+ * without predefine functions
+ *
+ * @author aizaz
+ */
 
 public class AscendingOrderArray {
     public static void main(String[] args) {
@@ -13,7 +16,7 @@ public class AscendingOrderArray {
         try {
             int n = sc.nextInt();
             int[] arr = new int[n];
-            //insterion of array elements:
+            //insertion of array elements:
             for (int i = 0; i < arr.length; i++) {
                 System.out.println("Enter arr[" + i + "]=");
                 arr[i] = sc.nextInt();
@@ -21,7 +24,7 @@ public class AscendingOrderArray {
             //sorting of elements
             for (int i = 0; i < arr.length; i++) {
                 for (int j = 0; j < arr.length; j++) {
-                   //Logic for sorting in ascending order
+                    //Logic for sorting in ascending order
                     if (arr[i] < arr[j]) {
                         int temp = arr[i];
                         arr[i] = arr[j];
@@ -31,9 +34,11 @@ public class AscendingOrderArray {
             }
             //printing sorted array elements:
             for (int e : arr) {
-                /*The purpose of using print instead of println
-                is to show all sorted elements in same line
-                 with space*/
+                /**
+                 * The purpose of using print instead of println
+                 *is to show all sorted elements in same line
+                 *with space
+                 */
                 System.out.print(e + " ");
             }
         } catch (InputMismatchException ime) {

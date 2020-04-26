@@ -1,8 +1,13 @@
 package com.trainee.aizaz.java;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * this purpose of this class is to
+ * find the sum of all array elements
+ *
+ * @author aizaz
+ */
 public class ArraySum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -21,8 +26,6 @@ public class ArraySum {
             //FOR ARRAY ELEMENTS
             System.out.println("Please!! Enter a Valid Input");
             System.out.println("Only Numbers Allowed");
-
-
         } catch (NegativeArraySizeException nse) {
             //FOR ARRAY SIZE
             System.out.println("Please!! Enter a Valid Input");

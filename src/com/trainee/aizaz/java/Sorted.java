@@ -3,8 +3,12 @@ import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/*The purpose of this class is to sort the elements
- * in ascending order using pre-define function */
+/**
+ * The purpose of this class is to sort the elements
+ * in ascending order using pre-define function
+ *
+ * @author aizaz
+ */
 public class Sorted {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -17,13 +21,15 @@ public class Sorted {
                 System.out.println("Enter arr[" + i + "]=");
                 arr[i] = sc.nextInt();
             }
-            //logic for sorting array elements:
+            //logic for sorting array elements in ascending order:
             Arrays.sort(arr);
             //printing sorted array elements:
             for (int e : arr) {
-                /*The purpose of using print instead of println
-                is to show all sorted elements in same line
-                 with space*/
+                /**
+                 * The purpose of using print instead of println
+                 *is to show all sorted elements in same line
+                 *with space
+                 */
                 System.out.print(e + " ");
             }
         } catch (InputMismatchException ime) {
