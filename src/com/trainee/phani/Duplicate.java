@@ -1,5 +1,7 @@
 package com.trainee.phani;
+
 import java.util.Scanner;
+
 /**
  * prg to find the duplicate elements in an array
  *
