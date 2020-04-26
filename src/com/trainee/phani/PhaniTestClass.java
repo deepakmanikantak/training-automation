@@ -21,7 +21,7 @@ public class PhaniTestClass {
                 System.out.println("Sum of the array is:" + sum);
             }
             catch(InputMismatchException IME){
-                System.out.println("invalid input pls enter valid input");
+                System.out.println("Invalid input pls enter valid input");
             }
         }
     }
