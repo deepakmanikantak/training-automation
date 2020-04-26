@@ -33,7 +33,7 @@ public class Diagonal {
             System.out.println("Right Diagonal Sum= " + secoundarysum);
             int diffrence = primarysum - secoundarysum;
             System.out.println("differnce of two diagonals are: " + diffrence);
-        }catch(InputMismatchException ime){
+        }catch(InputMismatchException IME){
             System.out.println("please enter valid input");
         }
     }
