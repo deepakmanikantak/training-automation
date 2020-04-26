@@ -1,8 +1,9 @@
 package com.trainee.phani;
 import java.util.Scanner;
 /**
-program to find a maximum element in an array
- @ author phani
+*program to find a maximum element in an array
+ *
+ *@ author phani
  **/
 public class Maxiumelement {
     public static void main(String[] args){
