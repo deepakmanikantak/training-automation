@@ -62,6 +62,5 @@ public class ArraySort {
         catch (NegativeArraySizeException NASE) {
             System.out.println("Array Size should not be negative");
         }
-
     }
 }
