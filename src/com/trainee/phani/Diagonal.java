@@ -1,6 +1,8 @@
 package com.trainee.phani;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 /**
  * program to difference b/w left diagonal and right diagonal of a matrix using scanner
  *
