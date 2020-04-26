@@ -14,6 +14,7 @@ public class ArraySort {
         int temp = 0;
         Scanner s = new Scanner(System.in);
         System.out.println("Enter the size of an array:");
+        //the code which can get exception should be placed in this block
         try {
             int n = s.nextInt();
             int arr[] = new int[n];
