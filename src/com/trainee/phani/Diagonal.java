@@ -25,8 +25,9 @@ public class Diagonal {
                     if (i == j) {    //to identify the left diagonal sum
                         primarysum = primarysum + matrix[i][j];
                     }
-                    if ((i + j) == (size - 1)) //to identify the right diagonal sum
+                    if ((i + j) == (size - 1)) {//to identify the right diagonal sum
                         secoundarysum = secoundarysum + matrix[i][j];
+                }
                 }
             }
             System.out.println("Left Diagonal Sum= " + primarysum);
