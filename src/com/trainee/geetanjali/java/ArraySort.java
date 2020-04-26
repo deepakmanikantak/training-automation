@@ -1,14 +1,14 @@
 package com.trainee.geetanjali.java;
-/**
- * this class represents sorting in both ascending and decending order
- *
- * @author geetanjali
- */
 
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * this class represents sorting in both ascending and decending order
+ *
+ * @author geetanjali
+ */
 public class ArraySort {
     public static void main(String args[]) {
         int temp = 0;
