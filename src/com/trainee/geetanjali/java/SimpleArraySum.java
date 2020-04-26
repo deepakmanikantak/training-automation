@@ -15,6 +15,7 @@ public class SimpleArraySum {
             for (int i = 0; i < n; i++) {
                 a[i] = s.nextInt();
                 sum = sum + a[i];
+                // Example For Merge Conflicts -- By Geetanjali
             }
             System.out.println("Sum:" + sum);
         } catch (InputMismatchException IME) {
