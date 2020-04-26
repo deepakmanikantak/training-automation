@@ -24,36 +24,34 @@ public class ArraySort {
                 System.out.println("Enter a[" + i + "]=");
                 arr[i] = s.nextInt();
             }
-
+            //this logic is to sort the array in ascending order
             for (int i = 0; i < n; i++) {
                 for (int j = i + 1; j < n; j++) {
-                    //this logic is to sort the array in ascending order
+
                     if (arr[i] > arr[j]) {
                         temp = arr[i];
                         arr[i] = arr[j];
                         arr[j] = temp;
                     }
-
-
                 }
-
             }
+
             System.out.println("Elements after sorting in ascending order");
+            //Arrays.toString method is used to convert array to string instead of using for loop
             System.out.println(Arrays.toString(arr));
+            //this logic is to sort the array in decending order
             for (int i = 0; i < n; i++) {
                 for (int j = i + 1; j < n; j++) {
-                    //this logic is to sort the array in decending order
+
                     if (arr[i] < arr[j]) {
                         temp = arr[i];
                         arr[i] = arr[j];
                         arr[j] = temp;
                     }
-
-
                 }
-
             }
             System.out.println("Elements after sorting in decending order");
+            //Arrays.toString method is used to convert array to string instead of using for loop
             System.out.print(Arrays.toString(arr));
         }
         //this block catches the exception when we give an input other than integer
