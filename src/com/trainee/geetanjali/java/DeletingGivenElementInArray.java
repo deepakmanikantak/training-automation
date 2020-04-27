@@ -1,5 +1,6 @@
 package com.trainee.geetanjali.java;
 
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -26,19 +27,23 @@ public class DeletingGivenElementInArray {
             //this logic is to find the element to be deleted and to delete that element
             for (int i = 0; i < n; i++) {
                 if (arr[i] == d) {
-
                     count++;
-                    break;
                 }
             }
             if (count == 0) {
                 System.out.print("Element Not Found..!!");
             } else {
+                int[] newArray = new int[n-count];
+                int j=0;
                 System.out.println("Element Deleted Successfully..!!");
                 System.out.println("Now the New Array is :");
-                for (int i = 0; i < (n - 1); i++) {
-                    System.out.print(arr[i] + " ");
-                }//System.out.println(Arrays.toString(arr));
+                for (int i = 0; i < arr.length ; i++) {
+                    if (arr[i] != d) {
+                        newArray[j] = arr[i];
+                        j++;
+                    }
+                }
+                System.out.println(Arrays.toString(newArray));
             }
         }
         //this block catches the exception when we give an input other than integer
