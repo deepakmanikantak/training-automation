@@ -14,8 +14,8 @@ public class FirstWebDriverScript {
 
         // Below property gives the path of the project location
         // For Mac : Please uncomment below property and comment windows path
-         String chromeDriverPath = System.getProperty("user.dir")+"/drivers/chromedriver";
-        //String chromeDriverPath = System.getProperty("user.dir") + "\\drivers\\chromedriver-81.exe";
+        // String chromeDriverPath = System.getProperty("user.dir")+"\\drivers\\chromedriver-mac-81";
+        String chromeDriverPath = System.getProperty("user.dir") + "\\drivers\\chromedriver-81.exe";
 
         System.out.println("ChromeDrive located At Path: " + chromeDriverPath);
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
