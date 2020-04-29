@@ -11,14 +11,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Purpose of this class is to perform the operations inorder to verify the logo and title and to add an item into cart
+ * This class is used to perform the operations inorder to verify the logo and title and to add an item into cart
  * and then checkout and to compare the both before and after checkout prices.
  *
  * @author geetanjali
  */
 public class InspectElementsAndApplyWaits {
     public static void main(String args[]) {
-        String expectedTitle = "My Store";
+        String title = "My Store";
         //getting the directory of chromedriver by using getProperty method
         String chromeDriverPath = System.getProperty("user.dir") + "\\drivers\\chromedriver-81.exe";
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
@@ -38,15 +38,15 @@ public class InspectElementsAndApplyWaits {
             System.out.println("logo is not displayed on the home page");
         }
         //getTitle method is used in order to get the title of a webpage
+        String actual = driver.getTitle();
         System.out.println(driver.getTitle());
-        String actualTitle = driver.getTitle();
         //it checks if the expected title and actual title ar equal or not
-        if (actualTitle.equals(expectedTitle)) {
+        if (actual.equals(title)) {
             System.out.println("Both expected title and actual title are same");
         } else {
             System.out.println("Both expected title and actual title are not same");
         }
-        //finding a top by using xpath as an locator and to click on it
+        //finding a product by using xpath as an locator and to click on it
         driver.findElement(By.xpath("//div[@id='block_top_menu']/ul/li[3]/a")).click();
         //as clicking operation is not performing by webdriver commands i am using javascript executor to perform that operation
         jse.executeScript("arguments[0].click();", driver.findElement(By.xpath("//a[@title='Add to cart']")));
@@ -70,7 +70,6 @@ public class InspectElementsAndApplyWaits {
             System.out.println("both prices are equal");
         } else
             System.out.println("both prices are not equal");
-        driver.quit();
     }
 }
 
