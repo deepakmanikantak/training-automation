@@ -41,9 +41,9 @@ public class SeliniumWebDriver {
         String orginaltitle = driver.getTitle();
         //for to check title is same or not
         if (orginaltitle.equals(title)) {
-            System.out.println("both title are same");
+            System.out.println("Tiles is matched");
         } else {
-            System.out.println("titles are not same");
+            System.out.println("titles are not matched");
         }
         //this is for to click on tshirts button
         driver.findElement(By.xpath("//div[@id='block_top_menu']/ul/li[3]/a")).click();
