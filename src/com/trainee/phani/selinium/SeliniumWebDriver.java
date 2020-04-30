@@ -45,7 +45,7 @@ public class SeliniumWebDriver {
         } else {
             System.out.println("Titles are not matched");
         }
-        //this is for to click on tshirts button
+        //This is for to click on tshirts button
         driver.findElement(By.xpath("//div[@id='block_top_menu']/ul/li[3]/a")).click();
         // js.executeScript("window.scrollBy(0,700)");
         //java scriprt executor is used to find the elements wihich are not there in eye scope
