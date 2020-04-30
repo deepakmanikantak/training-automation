@@ -64,9 +64,9 @@ public class SeliniumWebDriver {
         String fianlamount = famount.getText();
         //comparing the two amounts that ate equal or not by usig if condition
         if (cartamount.equals(fianlamount)) {
-            System.out.println("prices are equal");
+            System.out.println("Prices are equal");
         } else
-            System.out.println("prices are not equal");
+            System.out.println("Prices are not equal");
     }
 
 }
