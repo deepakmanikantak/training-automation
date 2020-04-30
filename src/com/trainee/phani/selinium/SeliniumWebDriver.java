@@ -43,7 +43,7 @@ public class SeliniumWebDriver {
         if (orginaltitle.equals(title)) {
             System.out.println("Tiles is matched");
         } else {
-            System.out.println("titles are not matched");
+            System.out.println("Titles are not matched");
         }
         //this is for to click on tshirts button
         driver.findElement(By.xpath("//div[@id='block_top_menu']/ul/li[3]/a")).click();
