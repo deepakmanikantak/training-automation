@@ -59,7 +59,6 @@ public class FirstWebDriverScript {
 
         WebDriverWait explicitwait = new WebDriverWait(driver, 90);
         explicitwait.until(ExpectedConditions.visibilityOf(addtocart));
-
         WebDriverWait explicitwai3 = new WebDriverWait(driver, 90);
 
 
