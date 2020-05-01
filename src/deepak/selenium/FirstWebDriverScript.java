@@ -32,6 +32,7 @@ public class FirstWebDriverScript {
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 
         WebDriver driver = new ChromeDriver();
+        // It appears on the dom-> then it no longer waits (
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         // Perform the rest of the operations
