@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 /**
  * the purpose of this class is to count number
  * of checkbox and radio buttons
@@ -26,5 +25,6 @@ public class NoOfCheckAndRadioButtons {
         List noOfRadioButton = driver.findElements(By.xpath("//*[contains(@id,'vfb-7')]"));
         //here are we are using size() method to now how many radio butons are available
         System.out.println("No of radio buttons available are: " + noOfRadioButton.size());
+        driver.quit();
     }
 }

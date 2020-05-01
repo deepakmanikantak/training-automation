@@ -1,12 +1,11 @@
 package com.trainee.aizaz.java;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
-
 /**
  * This class contains methods which can be re-usable for other classes
+ * @author aizaz
  */
 public class CommonMethods {
     /**
@@ -81,8 +80,7 @@ public class CommonMethods {
      *                  with other and sort it accordingly.
      */
 
-    //1
-
+    //1---stream reference
     /**
      * In this method we are filtering our collection elements which are even
      * using filter() method in which we are giving the condition.
@@ -93,11 +91,9 @@ public class CommonMethods {
     public List filterEven(ArrayList<Integer> al) {
         List<Integer> l = al.stream().filter(i -> i % 2 == 0).collect(Collectors.toList());
         return l;
-
     }
 
-    //2
-
+    //2--stream reference:
     /**
      * In this method we are sorting our collection elements in ascending order
      * using sorted() methodand then sorting using compareTo(0 method
@@ -105,15 +101,12 @@ public class CommonMethods {
      * @param al (ArrayList al)
      * @return l (List l)
      */
-
-
     public List ascendingLamda(ArrayList<Integer> al) {
         List<Integer> l = al.stream().sorted((i1, i2) -> i1.compareTo(i2)).collect(Collectors.toList());
         return l;
-
     }
 
-    //3
+    //3---sorted reference
 
     /**
      * In this method we are sorting our collection elements in desscending order
@@ -125,6 +118,5 @@ public class CommonMethods {
     public List descendingLamda(ArrayList<Integer> al) {
         List<Integer> l = al.stream().sorted((i1, i2) -> i2.compareTo(i1)).collect(Collectors.toList());
         return l;
-
     }
 }

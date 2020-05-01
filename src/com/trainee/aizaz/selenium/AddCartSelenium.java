@@ -1,5 +1,4 @@
 package com.trainee.aizaz.selenium;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -8,14 +7,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
-
 /**
  * The purpose of this script is to Launch APP > Verify LOGO > Verify Page Title >
  * Click on T shirts > Add item > Grab the Total Price >
  * Click on checkout > Verify the Total Price is same as it is in cart
  * @author aizaz
  */
-
 public class AddCartSelenium extends Thread {
     public static void main(String[] args) throws InterruptedException {
         String chromeDriverPath = System.getProperty("user.dir") + "/drivers/chromedriver";
@@ -37,7 +34,7 @@ public class AddCartSelenium extends Thread {
         /**
          * this logic displays whether the logo is displayed or not
          */
-        if (logo == true) {
+        if (logo) {
             System.out.println("LOGO DISPLAYED SUCESSFULLY");
 
         } else {
@@ -92,10 +89,10 @@ public class AddCartSelenium extends Thread {
          * this is the logic which compares cart price with checkout price.
          */
         if (price.contentEquals(checkoutprice)) {
-
             System.out.println("THE TOTAL PRICE IS SAME AS CART ");
         } else {
             System.out.println("THE TOTAL PRICE DOESN'T MATCH THE CART PRICE ");
         }
+        driver.quit();
     }
 }

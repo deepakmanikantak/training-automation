@@ -9,7 +9,6 @@ import java.util.concurrent.TimeUnit;
  * uncheck the checkbox
  * @author aizaz
  */
-
 public class CheckandUncheck {
     public static void main(String[] args) {
         String chromeDriverPath = System.getProperty("user.dir") + "/drivers/chromedriver";
@@ -23,5 +22,6 @@ public class CheckandUncheck {
         driver.findElement(By.id("vfb-6-0")).click();
         //uncheck the checkbox
         driver.findElement(By.id("vfb-6-0")).click();
+        driver.quit();
     }
 }

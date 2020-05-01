@@ -3,13 +3,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.Scanner;
-
 /**
  * this purpose of this program is selection of browser and open
  * website in the selected browser
  * @author aizaz
  */
-
 public class SelectBrowser {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -31,5 +29,6 @@ public class SelectBrowser {
                 driver = new FirefoxDriver();
         }
         driver.get("https://www.google.com");
+        driver.quit();
     }
 }

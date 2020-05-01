@@ -32,10 +32,11 @@ public class CheckRadioButton {
          * even after selecting radio button-2
          */
         boolean radio1Selected = radio1.isSelected();
-        if (radio1Selected == false) {
-            System.out.println("radio button 1 is not selected \n Test passed");
-        } else {
+        if (radio1Selected) {
             System.out.println("radio-1 is selected even after clicking radio button 2 \n Test failed");
+        } else {
+            System.out.println("radio button 1 is not selected \n Test passed");
         }
+        driver.quit();
     }
 }
