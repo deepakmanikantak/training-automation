@@ -4,6 +4,16 @@ import com.trainee.aizaz.selenium.Pages.CartPage;
 import com.trainee.aizaz.selenium.Pages.HomePage;
 import org.openqa.selenium.WebDriver;
 
+/**
+ * purpose of this class is to test whether the price is reduced after the removal of any item
+ *PROCESS:::
+ * homepage---->Womens--->Tshirts---->category section---->addtocart--->addtocartmodel
+ * ----->click on continue shopping---->categorysection----click on women
+ * ---->addtocartanotheritem---->selectcartsection----reterivingcurrentprice
+ * ----removingoneitem-----reterivinglatestprice--->comparingbothprices.
+ *
+ */
+
 public class Script extends BaseTest {
     public static void main(String[] args) {
         Script s = new Script();
