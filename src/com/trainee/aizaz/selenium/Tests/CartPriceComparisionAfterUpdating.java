@@ -14,9 +14,9 @@ import org.openqa.selenium.WebDriver;
  *
  */
 
-public class Script extends BaseTest {
+public class CartPriceComparisionAfterUpdating extends BaseTest {
     public static void main(String[] args) {
-        Script s = new Script();
+        CartPriceComparisionAfterUpdating s = new CartPriceComparisionAfterUpdating();
         //calling driver from BaseTest
         WebDriver driver = s.driverManager();
         //creating object for HomePage and sending driver as parameter
@@ -33,11 +33,11 @@ public class Script extends BaseTest {
          */
         CartPage cartPage = new CartPage(driver);
         //removing item from cart
-        cartPage.removeItem();
+     //   cartPage.removeItem();
         /**
          * Rechecking the cart price
          */
-        String cartPriceAfter = cartPage.cartPrice();
+        String cartPriceAfter = cartPage.removeItem().cartPrice();
         System.out.println("cart price after removal of item" + cartPriceAfter);
         /**
          * comparing cart price before removal of item with price after removal item:
@@ -47,5 +47,6 @@ public class Script extends BaseTest {
         } else {
             System.out.println("Test passed");
         }
+        driver.quit();
     }
 }
