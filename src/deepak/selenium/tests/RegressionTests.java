@@ -3,7 +3,7 @@ package deepak.selenium.tests;
 import deepak.selenium.pages.HomePage;
 import org.testng.annotations.*;
 
-public class RegressionTests {
+public class RegressionTests extends BaseTestTestNG{
 
 
     @BeforeSuite
@@ -29,6 +29,7 @@ public class RegressionTests {
 
     @Test
     public void a(){
+        HomePage homePage  = new HomePage(driver);
        //Start doing the validations
         System.out.println("Executing : homePageTest");
     }
