@@ -52,14 +52,15 @@ public class BasePage {
         jse.executeScript("arguments[0].click()", element);
     }
 
-    public  void javaScriptExecute1(WebElement element) {
+    public  void javaScriptExecute1(WebElement element,String s) {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("arguments[0].getText()", element);
+
+        jse.executeScript("arguments[0].value="+s+";", element);
     }
     /**
      * Explixit wait
      */
-    public  void explicitWait(WebDriver driver,WebElement element){
+    public  void explicitWait(WebElement element){
         WebDriverWait explicitwait=new WebDriverWait(driver,20);
         explicitwait.until(ExpectedConditions.visibilityOf(element));
     }

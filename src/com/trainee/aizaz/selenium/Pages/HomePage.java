@@ -1,7 +1,4 @@
 package com.trainee.aizaz.selenium.Pages;
-
-//import com.trainee.aizaz.selenium.GlobalVariables;
-
 import com.trainee.aizaz.selenium.GlobalVariables;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,6 +13,9 @@ public class HomePage extends BasePage {
 
     @FindBy(xpath =  "//a[@title='Women']/..//a[@title='T-shirts']")
     private WebElement tshirt;
+
+    @FindBy(xpath = "//a[@title='Log in to your customer account']")
+    private WebElement signin;
 
 
     public HomePage(WebDriver driver) {
@@ -34,6 +34,12 @@ public class HomePage extends BasePage {
         Actions action = new Actions(driver);
         action.moveToElement(women).click(tshirt).build().perform();
         return new CategoryPage(driver);
+    }
+    public AuthenticationPage clickOnSignIn(){
+        maximizeAndImplicit(driver);
+        driver.get("http://automationpractice.com/index.php");
+        signin.click();
+        return new AuthenticationPage(driver);
     }
 
 

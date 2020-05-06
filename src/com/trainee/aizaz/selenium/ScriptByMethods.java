@@ -1,6 +1,9 @@
 package com.trainee.aizaz.selenium;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import static com.trainee.aizaz.selenium.CommonStaticMethods.driverSelection;
+
 /**
  * The purpose of this class is to execute script using BasePage and
  * Global Variables....
@@ -14,7 +17,7 @@ public class ScriptByMethods {
          * GlobalVariables.url is a parameter which is GlobalVariable class
          * as these are static methods we are calling it by class name...
          */
-        WebDriver driver = BasePage.browser(GlobalVariables.browserChrome);
+        WebDriver driver = driverSelection(GlobalVariables.browserChrome);
         /**
          * This method is present in BasePage class which maximize the window
          * and also applies the implicit wait...
