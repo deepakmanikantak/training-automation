@@ -1,10 +1,9 @@
 package deepak.selenium.tests;
 
-import deepak.selenium.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class RegressionTests {
+public class CheckoutTests {
 
 
     @BeforeSuite
@@ -29,7 +28,7 @@ public class RegressionTests {
     }
 
     @Test(groups = {"smoke"})
-    public void a(){
+    public void checkouta(){
        //Start doing the validations
         String expectedResult = "MY Store";
         String actualResult = "Store" ;// homepage.getTitle();
@@ -40,13 +39,20 @@ public class RegressionTests {
     }
 
     @Test(groups = {"smoke"})
-    public void b(){
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public void checkoutb(){
         throw new RuntimeException("Hell");
+//        System.out.println("Executing : homePageNegativeScenarioTest");
+    }
+
+    @Test(groups = {"regression"})
+    public void checkoutd(){
+      //  throw new RuntimeException("Hell");
+//        System.out.println("Executing : homePageNegativeScenarioTest");
+    }
+
+    @Test(groups = {"regression"})
+    public void checkoute(){
+        //throw new RuntimeException("Hell");
 //        System.out.println("Executing : homePageNegativeScenarioTest");
     }
 
@@ -57,7 +63,7 @@ public class RegressionTests {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-      //  throw new RuntimeException("Hell");
+        //  throw new RuntimeException("Hell");
 //        System.out.println("Executing : homePageNegativeScenarioTest");
     }
 
@@ -75,7 +81,7 @@ public class RegressionTests {
     @Test(groups = {"regression"})
     public void e(){
         try {
-            Thread.sleep(5000);
+            Thread.sleep(7000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -86,7 +92,7 @@ public class RegressionTests {
     @Test(groups = {"regression"})
     public void cf(){
         try {
-            Thread.sleep(5000);
+            Thread.sleep(7000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -97,7 +103,7 @@ public class RegressionTests {
     @Test(groups = {"regression"})
     public void sds(){
         try {
-            Thread.sleep(5000);
+            Thread.sleep(7000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -108,13 +114,15 @@ public class RegressionTests {
     @Test(groups = {"regression"})
     public void cdasdasd(){
         try {
-            Thread.sleep(5000);
+            Thread.sleep(7000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         //throw new RuntimeException("Hell");
 //        System.out.println("Executing : homePageNegativeScenarioTest");
     }
+
+
 
 
 
