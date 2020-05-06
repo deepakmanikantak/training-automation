@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 public class Tests extends BaseTestNG {
-    WebDriver driver;
+
     @BeforeMethod
     public void Beforemethod(){
         System.out.println("Before method");
