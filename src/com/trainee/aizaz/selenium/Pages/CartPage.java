@@ -21,7 +21,7 @@ public class CartPage extends BasePage {
     public String cartPrice() {
 
       //  WebElement cartitem = findElement(GlobalVariables.xpath, "//tr[@class='cart_total_price']//td[2]/span[@id='total_price']");
-        explicitWait(driver, cartitem);
+        explicitWait(cartitem);
         return cartitem.getText();
 
     }
