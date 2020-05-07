@@ -9,6 +9,10 @@ public class MyAccount extends BasePage {
         private WebElement logout;
         @FindBy(xpath ="//a[@class='home']")
         private WebElement home;
+        @FindBy(xpath = "//h1[@class='page-heading']")
+        private WebElement myAccountText;
+        @FindBy(xpath = "//a[@title='Information']")
+        private WebElement myInformation;
         public MyAccount(WebDriver driver){
             super(driver);
             this.driver=driver;
@@ -20,5 +24,11 @@ public class MyAccount extends BasePage {
         public HomePage returnHome(){
             home.click();
             return new HomePage(driver);
+        }
+        public boolean myAccountHeading(){
+            return myAccountText.isDisplayed();
+        }
+        public boolean myPersonalInformationSectionDisplayed(){
+            return myInformation.isDisplayed();
         }
 }

@@ -15,20 +15,25 @@ public class AuthenticationPage extends BasePage {
     private WebElement loinPassword;
     @FindBy(xpath = "//button[@id='SubmitLogin']")
     private WebElement login;
+    @FindBy(xpath = "//h1[@class='page-heading']")
+    private WebElement authenticationHeading;
     public AuthenticationPage(WebDriver driver){
         super(driver);
         this.driver=driver;
     }
 public CreateAccount emailForRegistration(){
         explicitWait(email);
-        email.sendKeys("helloworld6@gmail.com");
+        email.sendKeys("helloworld13@gmail.com");
         createAccountButton.click();
         return new CreateAccount(driver);
     }
     public MyAccount login(){
-        loginEmail.sendKeys("helloworld6@gmail.com");
+        loginEmail.sendKeys("helloworld13@gmail.com");
         loinPassword.sendKeys("hello");
         login.click();
         return new MyAccount(driver);
+    }
+   public boolean signInButtonDisplayed(){
+        return login.isDisplayed();
     }
 }

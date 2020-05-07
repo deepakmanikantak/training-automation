@@ -1,9 +1,11 @@
 package com.trainee.aizaz.selenium.Tests;
-import com.trainee.aizaz.selenium.Pages.AuthenticationPage;
-import com.trainee.aizaz.selenium.Pages.HomePage;
+
+import com.trainee.aizaz.selenium.Pages.*;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 /**
  * this class contains complete test of the e-commerece website
  * ---------flow----------
@@ -16,17 +18,48 @@ public class SignInLoginAddtoCartTestng extends BaseTestNg {
         System.out.println("Execute:Before suite");
     }
 
-    @Test(priority=1)
-    public void signIn(){
+    /**
+     * This test contains registration of new user and then after registering performing logout
+     * :::checks:::
+     * 1.)After registering checking whether MY PERSONAL INFORMATION section is visible.
+     * 2.)After logout checking whether sign in button is visible
+     */
+    @Test(priority = 1)
+    public void registrationAndLogout() {
         HomePage homePage = new HomePage(driver);
-        homePage.clickOnSignIn().emailForRegistration().accountDetailsforRegistration().logout();
+        homePage.clickOnSignIn().emailForRegistration().accountDetailsforRegistration();
+       //checking whether after registration is user able to see My personal Information section:
+        MyAccount ma = new MyAccount(driver);
+        Assert.assertTrue(ma.myPersonalInformationSectionDisplayed(), "My Personal Information Section not displayed");
+        ma.logout();
+        //checking whether after logout is user able to see sign in section:
+        AuthenticationPage ap = new AuthenticationPage(driver);
+        Assert.assertTrue(ap.signInButtonDisplayed(), "sign button not displayed after logout");
+
     }
-    @Test(priority =2)
-    public void loginandCheckout(){
-        HomePage homePage=new HomePage(driver);
-        homePage.clickOnSignIn().login().returnHome().clickOnTshirts().addProductToCart().clickOnInitialCheckout()
+
+    /**
+     * This test contains logging in with the existing id and placing order.
+     * :::checks:::
+     * 1.)After login checking whether MY PERSONAL INFORMATION section is visible.
+     * 2.)After placing order whether user is able to see order confirmation message.
+     */
+    @Test(priority = 2)
+    public void loginandCheckout() {
+        //after entering userid and password click on login
+        HomePage homePage = new HomePage(driver);
+        homePage.clickOnSignIn().login();
+        //checking whether after login user is able to see my personal information section:
+        MyAccount ma = new MyAccount(driver);
+        Assert.assertTrue(ma.myPersonalInformationSectionDisplayed(), "My Personal Information Section not displayed");
+        //after login returning on homepage-->adding item-->proceeding to all checkouts--->finally confirming order
+        ma.returnHome().clickOnTshirts().addProductToCart().clickOnInitialCheckout()
                 .checkout2().AddressCheckout().shippingCheckout().payByCheque().iConfirmOrder();
+        //checking whether after placing order the confirmation message is displayed or not:
+        ConfirmationPage cp=new ConfirmationPage(driver);
+        Assert.assertTrue(cp.orderSucesssMessage(),"order success message not displayed");
     }
+
     @AfterMethod
     public void afterMethod() {
         System.out.println("Execute:After suite");

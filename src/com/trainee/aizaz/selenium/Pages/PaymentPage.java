@@ -12,8 +12,8 @@ public class PaymentPage extends BasePage {
         super(driver);
         this.driver = driver;
     }
-    public OrderConfirmationPage payByCheque(){
+    public OrderSummaryPage payByCheque(){
         payByCheque.click();
-        return new OrderConfirmationPage(driver);
+        return new OrderSummaryPage(driver);
     }
 }

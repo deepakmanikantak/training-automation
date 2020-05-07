@@ -61,4 +61,7 @@ public class CreateAccount extends BasePage {
         javaScriptExecute(register);
         return new MyAccount(driver);
     }
+    public boolean registerButtonFind(){
+        return register.isDisplayed();
+    }
 }

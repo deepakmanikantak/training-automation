@@ -4,15 +4,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class OrderConfirmationPage extends BasePage {
+public class OrderSummaryPage extends BasePage {
     private WebDriver driver;
     @FindBy(xpath = "//button[@class='button btn btn-default button-medium']")
     private WebElement orderConfirmButton;
-    public OrderConfirmationPage(WebDriver driver){
+    public OrderSummaryPage(WebDriver driver){
         super(driver);
         this.driver=driver;
     }
-    public void iConfirmOrder(){
+    public ConfirmationPage iConfirmOrder(){
         orderConfirmButton.click();
+        return new ConfirmationPage(driver);
     }
 }
