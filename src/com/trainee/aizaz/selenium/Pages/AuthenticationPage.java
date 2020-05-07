@@ -23,12 +23,12 @@ public class AuthenticationPage extends BasePage {
     }
 public CreateAccount emailForRegistration(){
         explicitWait(email);
-        email.sendKeys("helloworld13@gmail.com");
+        email.sendKeys("helloworld14@gmail.com");
         createAccountButton.click();
         return new CreateAccount(driver);
     }
     public MyAccount login(){
-        loginEmail.sendKeys("helloworld13@gmail.com");
+        loginEmail.sendKeys("helloworld14@gmail.com");
         loinPassword.sendKeys("hello");
         login.click();
         return new MyAccount(driver);
