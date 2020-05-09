@@ -12,7 +12,7 @@ public class ConfirmationPage extends BasePage {
         super(driver);
         this.driver=driver;
     }
-    public boolean orderSucesssMessage(){
+    public boolean orderConfirmationMessage(){
         return orderSucessMessage.isDisplayed();
     }
 }

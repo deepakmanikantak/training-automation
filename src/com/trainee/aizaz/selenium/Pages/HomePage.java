@@ -11,7 +11,7 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//a[@title='Women']")
     private WebElement women;
 
-    @FindBy(xpath =  "//a[@title='Women']/..//a[@title='T-shirts']")
+    @FindBy(xpath = "//a[@title='Women']/..//a[@title='T-shirts']")
     private WebElement tshirt;
 
     @FindBy(xpath = "//a[@title='Log in to your customer account']")
@@ -24,8 +24,7 @@ public class HomePage extends BasePage {
     }
 
     public CategoryPage clickOnTshirts() {
-        maximizeAndImplicit(driver);
-        driver.get("http://automationpractice.com/index.php");
+      //the purpose of keeping this is to show difference b/w finElement and @FindBy
        /* WebElement women = null;
         WebElement tshirt = null;
         women = findElement(GlobalVariables.xpath, "//a[@title='Women']");
@@ -35,12 +34,9 @@ public class HomePage extends BasePage {
         action.moveToElement(women).click(tshirt).build().perform();
         return new CategoryPage(driver);
     }
-    public AuthenticationPage clickOnSignIn(){
-        maximizeAndImplicit(driver);
-        driver.get("http://automationpractice.com/index.php");
+
+    public AuthenticationPage clickOnSignIn() {
         signin.click();
         return new AuthenticationPage(driver);
     }
-
-
 }

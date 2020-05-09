@@ -1,7 +1,5 @@
 package com.trainee.aizaz.java;
-
 import java.util.Scanner;
-
 /**
  * the purpose of this class is to print reverse of string along
  * with reverse of its words.

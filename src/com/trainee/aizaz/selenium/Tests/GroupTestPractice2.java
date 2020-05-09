@@ -1,5 +1,4 @@
 package com.trainee.aizaz.selenium.Tests;
-
 import org.testng.annotations.Test;
 
 public class GroupTestPractice2 {

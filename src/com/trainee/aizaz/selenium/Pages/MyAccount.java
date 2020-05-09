@@ -21,7 +21,7 @@ public class MyAccount extends BasePage {
             logout.click();
             return new AuthenticationPage(driver);
         }
-        public HomePage returnHome(){
+        public HomePage returnHomePage(){
             home.click();
             return new HomePage(driver);
         }

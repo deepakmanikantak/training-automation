@@ -1,7 +1,6 @@
 package com.trainee.aizaz.java;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 /**
  * The purpose of this code is to show transpose of matrix
  */
@@ -24,7 +23,6 @@ public class TransposeOfMatrix {
             for (int i = 0; i < arr1.length; i++) {
                 for (int j = 0; j < arr1.length; j++) {
                     arr2[j][i] = arr1[i][j];
-
                 }
             }
             System.out.println("TRANSPOSE ARRAY");

@@ -1,8 +1,6 @@
 package com.trainee.aizaz.selenium.Tests;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 public class BaseTest {
     /**
      * this class is used to instantiate web driver which we

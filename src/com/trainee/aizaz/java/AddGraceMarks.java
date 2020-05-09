@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.stream.Collectors;
-
 /**
  * purpose of this class is to add 5 grace marks
  * by using map() method

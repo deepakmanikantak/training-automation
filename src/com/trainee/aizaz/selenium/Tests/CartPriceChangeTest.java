@@ -44,7 +44,6 @@ public class CartPriceChangeTest extends BaseTestNg{
         } else {
             System.out.println("Test passed");
         }
-
     }
 
     @AfterMethod

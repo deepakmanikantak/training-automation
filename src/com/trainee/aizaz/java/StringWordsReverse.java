@@ -1,6 +1,5 @@
 package com.trainee.aizaz.java;
 import java.util.Scanner;
-
 /**
  * The purpose of this class is to print String words in reverse order
  */

@@ -1,5 +1,4 @@
 package com.trainee.aizaz.java;
-
 import java.util.Scanner;
 
 /**

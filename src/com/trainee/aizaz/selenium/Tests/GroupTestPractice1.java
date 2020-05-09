@@ -1,8 +1,5 @@
 package com.trainee.aizaz.selenium.Tests;
-
 import org.testng.annotations.Test;
-
-import java.security.acl.Group;
 
 public class GroupTestPractice1 {
     @Test(groups = {"regression"})

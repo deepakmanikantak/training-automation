@@ -1,13 +1,10 @@
 package com.trainee.aizaz.java;
-
 import java.util.ArrayList;
 import java.util.ListIterator;
-
 /**
  * The purpose of this class is to get collection objects one by one
  * in reverse oder using cursors.
  */
-
 public class TraversingInCollections {
     public static void main(String args[]) {
         ArrayList<String> al = new ArrayList<String>();

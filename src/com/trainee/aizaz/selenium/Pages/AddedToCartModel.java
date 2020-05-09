@@ -14,8 +14,6 @@ public class AddedToCartModel extends BasePage {
     @FindBy(xpath = "//div[@class='button-container']//a[@title='Proceed to checkout']")
     private WebElement initialCheckout;
 
-
-
     public AddedToCartModel(WebDriver driver) {
         super(driver);
         this.driver = driver;
@@ -23,7 +21,7 @@ public class AddedToCartModel extends BasePage {
 
     public String getCartPrice() {
       //  WebElement price = findElement("//span[@class='ajax_block_cart_total']", GlobalVariables.xpath);
-        explicitWait( price);
+        visibilityOfElement( price);
         String cartPrice = price.getText();
         return cartPrice;
     }
@@ -35,7 +33,7 @@ public class AddedToCartModel extends BasePage {
 
     public CategoryPage continueShopping() {
       //  WebElement shopping = findElement(GlobalVariables.xpath, "//div[@class='button-container']//span[@title='Continue shopping']");
-        explicitWait(shopping);
+        visibilityOfElement(shopping);
         shopping.click();
         return new CategoryPage(driver);
 

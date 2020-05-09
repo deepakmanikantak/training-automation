@@ -13,13 +13,8 @@ public class CheckoutPage extends BasePage {
         super(driver);
         this.driver = driver;
     }
-    public ProcessAddress checkout2(){
+    public ProcessAddress checkoutAtCheckoutPage(){
         finalCheckout.click();
         return new ProcessAddress(driver);
-
     }
 }
-
-////a[@title='Proceed to checkout']
-////div[@class='button-container']//a[@title='Proceed to checkout']
-////div[@id='HOOK_SHOPPING_CART']/..//a[@title='Proceed to checkout']

@@ -1,9 +1,7 @@
 package com.trainee.aizaz.java;
-
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 /**
  * the purpose of this class is to copy one array into another array
  */

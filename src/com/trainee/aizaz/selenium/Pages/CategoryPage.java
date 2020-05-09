@@ -21,10 +21,9 @@ public class CategoryPage extends BasePage {
         this.driver = driver;
     }
 
-
     public AddedToCartModel addProductToCart() {
        /* WebElement addtocart = findElement(GlobalVariables.xpath, "//a[@title='Add to cart']");*/
-        javaScriptExecute(addtocart);
+        clickElement(addtocart);
         return new AddedToCartModel(driver);
     }
 
@@ -34,5 +33,4 @@ public class CategoryPage extends BasePage {
         return new CartPage(driver);
 
     }
-
 }

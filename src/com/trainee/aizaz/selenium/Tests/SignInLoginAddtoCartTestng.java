@@ -27,8 +27,11 @@ public class SignInLoginAddtoCartTestng extends BaseTestNg {
     @Test(priority = 1)
     public void registrationAndLogout() {
         HomePage homePage = new HomePage(driver);
-        homePage.clickOnSignIn().emailForRegistration().accountDetailsforRegistration();
-       //checking whether after registration is user able to see My personal Information section:
+        homePage.clickOnSignIn().emailForRegistration("helloworld20@gmail.com").clickOnGender("male")
+                .setFirstName("aizaz").setLastName("ahmed").setPassword("hello").setAddress("james road")
+                .setCityName("chicago").clickOnCountry().clickOnState(5).setPostcode("00000").setMobileNo("2085557704")
+                .clickOnRegister();
+        //checking whether after registration is user able to see My personal Information section:
         MyAccount ma = new MyAccount(driver);
         Assert.assertTrue(ma.myPersonalInformationSectionDisplayed(), "My Personal Information Section not displayed");
         ma.logout();
@@ -48,16 +51,16 @@ public class SignInLoginAddtoCartTestng extends BaseTestNg {
     public void loginandCheckout() {
         //after entering userid and password click on login
         HomePage homePage = new HomePage(driver);
-        homePage.clickOnSignIn().login();
+        homePage.clickOnSignIn().sendLoginEmailId("helloworld20@gmail.com").sendLoginPassword("hello").clickOnLogIn();
         //checking whether after login user is able to see my personal information section:
         MyAccount ma = new MyAccount(driver);
         Assert.assertTrue(ma.myPersonalInformationSectionDisplayed(), "My Personal Information Section not displayed");
         //after login returning on homepage-->adding item-->proceeding to all checkouts--->finally confirming order
-        ma.returnHome().clickOnTshirts().addProductToCart().clickOnInitialCheckout()
-                .checkout2().AddressCheckout().shippingCheckout().payByCheque().iConfirmOrder();
+        ma.returnHomePage().clickOnTshirts().addProductToCart().clickOnInitialCheckout()
+                .checkoutAtCheckoutPage().AddressCheckout().shippingCheckout().payByCheque().iConfirmOrder();
         //checking whether after placing order the confirmation message is displayed or not:
-        ConfirmationPage cp=new ConfirmationPage(driver);
-        Assert.assertTrue(cp.orderSucesssMessage(),"order success message not displayed");
+        ConfirmationPage cp = new ConfirmationPage(driver);
+        Assert.assertTrue(cp.orderConfirmationMessage(), "order success message not displayed");
     }
 
     @AfterMethod
