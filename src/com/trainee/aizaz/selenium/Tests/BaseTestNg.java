@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 import static com.trainee.aizaz.selenium.CommonStaticMethods.driverSelection;
 public class BaseTestNg {
     WebDriver driver;
-    //@BeforeMethod
+    @BeforeMethod
     public void initiateDriver() {
         driver = driverSelection(GlobalVariables.browserChrome);
         driver.manage().window().maximize();
