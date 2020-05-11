@@ -12,6 +12,7 @@ public class ReadSetOfDataFromExcelTest {
         XSSFWorkbook workbook=new XSSFWorkbook(fis);
         XSSFSheet sheet=workbook.getSheetAt(0);
     int rowCount=sheet.getLastRowNum();
+    System.out.print(rowCount);
         /**
          * Why i have taken i= starts from 1 is because at 0 row i have taken headings
          * fom row 1 the data  starts.

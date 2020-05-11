@@ -1,16 +1,16 @@
 package com.trainee.aizaz.selenium.Tests;
 import com.trainee.aizaz.selenium.GlobalVariables;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import static com.trainee.aizaz.selenium.CommonStaticMethods.driverSelection;
+
 public class BaseTestNg {
     WebDriver driver;
     @BeforeMethod
@@ -19,28 +19,34 @@ public class BaseTestNg {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("http://automationpractice.com/index.php");
-       }
+    }
 
-
-
-       public Object[][] readDataFromExcel() throws IOException {
-        File f=new File("src/com/trainee/aizaz/selenium/Tests/TestDataForSignIn.xlsx");
-        FileInputStream fis=new FileInputStream(f);
-        XSSFWorkbook workbook=new XSSFWorkbook(fis);
-        XSSFSheet sheet=workbook.getSheetAt(0);
-        int rowCount=sheet.getLastRowNum();
-        /**
-         * Why i have taken i= starts from 1 is because at 0 row i have taken headings
-         * fom row 1 the data  starts.
-         */
-        String  userName=null;
-        String  passWord=null;
-        for(int i=1;i<=rowCount;i++){
-            userName=sheet.getRow(i).getCell(0).getStringCellValue();
-            passWord=sheet.getRow(i).getCell(1).getStringCellValue();
+    /**
+     *
+     * This method is used to read the data from the excel sheet
+     *
+     * @return
+     * @throws IOException
+     */
+    public Object[][] getDataFromExcel(String url) throws IOException {
+        File f = new File(url);
+        FileInputStream fis = new FileInputStream(f);
+        XSSFWorkbook workbook = new XSSFWorkbook(fis);
+        XSSFSheet sheet = workbook.getSheetAt(0);
+        Row row = sheet.getRow(0);
+        int rowCount = sheet.getLastRowNum();
+        int columnCount = row.getPhysicalNumberOfCells();
+        System.out.println(rowCount);
+        System.out.println(columnCount);
+        String userName = null;
+        String passWord = null;
+        Object[][] data = new Object[rowCount][columnCount];
+        for (int i = 0; i < rowCount; i++) {
+            userName = sheet.getRow(i+1).getCell(0).getStringCellValue();
+            passWord = sheet.getRow(i+1).getCell(1).getStringCellValue();
+            data[i][0] = userName;
+            data[i][1] = passWord;
         }
-        return new Object[][]{
-                {userName,passWord}
-        };
+        return data;
     }
 }

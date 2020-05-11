@@ -1,6 +1,4 @@
 package com.trainee.aizaz.selenium.Pages;
-
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -118,7 +116,6 @@ public class CreateAccount extends BasePage {
         register.click();
         return new MyAccount(driver);
     }
-
     public boolean registerButtonFind() {
         return register.isDisplayed();
     }
