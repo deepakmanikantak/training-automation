@@ -46,9 +46,8 @@ public class BasePage {
     }
 
     /**
-     * method for JavaScriptExecutor:
-     *
-     * @param element
+     * method for JavaScriptExecutor to click:
+     *@param element
      */
     public void clickElement(WebElement element) {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
