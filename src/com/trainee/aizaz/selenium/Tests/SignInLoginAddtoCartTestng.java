@@ -27,7 +27,7 @@ public class SignInLoginAddtoCartTestng extends BaseTestNg {
     @Test(priority = 1)
     public void registrationAndLogout() {
         HomePage homePage = new HomePage(driver);
-        homePage.clickOnSignIn().emailForRegistration("aizaz5@gmail.com").clickOnGender("male")
+        homePage.clickOnSignIn().emailForRegistration("aizaz10@gmail.com").clickOnGender("male")
                 .setFirstName("aizaz").setLastName("ahmed").setPassword("hello").setAddress("james road")
                 .setCityName("chicago").clickOnCountry().clickOnState(5).setPostcode("00000").setMobileNo("2085557704")
                 .clickOnRegister();
