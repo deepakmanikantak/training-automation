@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
  */
 public class DriverIntialization {
     public WebDriver driverIntilization(){
-        String chromePath=System.getProperty("user.dir")+"/driver/chromedriver";
+        String chromePath=System.getProperty("user.dir")+"/drivers/chromedriver";
         System.out.println(chromePath);
         System.setProperty("webdriver.chrome.driver",chromePath);
         WebDriver driver=new ChromeDriver();
