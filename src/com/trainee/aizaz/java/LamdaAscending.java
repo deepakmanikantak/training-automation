@@ -19,6 +19,11 @@ public class LamdaAscending extends CommonMethods {
         al.add(88);
         al.add(70);
         System.out.println(al);
+        /**
+         * here are we are calling ascendingLamda method which is CommonMethods class
+         *for complete refernce of documentation refer CommonMethod class
+         */
+
         List<Integer> sort = la.ascendingLamda(al);
         System.out.println(sort);
 
