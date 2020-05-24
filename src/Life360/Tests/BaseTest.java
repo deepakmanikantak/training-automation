@@ -1,7 +1,6 @@
 package Life360.Tests;
 import Life360.Utils.DriverIntialization;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import java.util.concurrent.TimeUnit;
 /**
@@ -10,18 +9,12 @@ import java.util.concurrent.TimeUnit;
  * so that always before starting the test @Before method should get executed.
  */
 public class BaseTest extends DriverIntialization {
-    WebDriver driver;
-
+    private WebDriver driver;
     @BeforeMethod
     public void setDriver(){
         driver=driverIntilization();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("http://www.life360.com");
-    }
-
-    @AfterMethod
-    public void quit(){
-        driver.quit();
     }
 }

@@ -8,7 +8,6 @@ public class SignUp extends BasePage {
     private WebDriver driver;
     @FindBy(id="UserFirstName")
     private WebElement firstName;
-
     @FindBy(id="UserLastName")
     private WebElement lastName;
     public SignUp(WebDriver driver){
