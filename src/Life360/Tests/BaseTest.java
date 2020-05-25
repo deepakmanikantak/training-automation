@@ -4,12 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import java.util.concurrent.TimeUnit;
 /**
- * This is the BaseTest class which will be extended by our test class. In this BaseTest we will be keeping methods
- * which are used in our test case and also we are keeping here @BeforeMethod
- * so that always before starting the test @Before method should get executed.
+ * The purpose of this BaseTest class is the actions which are going to perform before every test execution
+ * should be written in @BeforeMethod annotation and this class will be extended by all
+ * the test classes.
+ *
  */
 public class BaseTest extends DriverIntialization {
-    private WebDriver driver;
+    WebDriver driver;
     @BeforeMethod
     public void setDriver(){
         driver=driverIntilization();

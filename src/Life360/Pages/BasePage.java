@@ -1,9 +1,13 @@
 package Life360.Pages;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 /**
- * In this class we will be keeping all the common methods which are required in all the page classes.
- * This class will be extended by all the Page classes.
+ * The purpose of this class is to write  the reusable methods and this class will
+ * be extended by all the page classes
+ *
+ * @author Geetanjali
  */
 public class BasePage {
     WebDriver driver;
@@ -11,5 +15,9 @@ public class BasePage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
 
+    }
+    public void javaScriptExecutorToClick(WebElement element) {
+        JavascriptExecutor click = (JavascriptExecutor) driver;
+        click.executeScript("arguments[0].click()", element);
     }
 }
