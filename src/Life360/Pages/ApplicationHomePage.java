@@ -2,7 +2,11 @@ package Life360.Pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
+/**
+ * The purpose of this ApplicationHomePage class is to perform the actions to
+ * SignIn and SignOut
+ *
+ */
 public class ApplicationHomePage extends BasePage {
     private WebDriver driver;
 
