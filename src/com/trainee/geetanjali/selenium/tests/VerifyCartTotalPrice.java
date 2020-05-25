@@ -6,18 +6,20 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class VerifyCartTotalPrice extends BaseTestNGTest {
-        @BeforeMethod
-        public void beforeMethod(){
-            System.out.println("Before test execution");
+public class VerifyCartTotalPrice extends BaseTestNGTest  {
+    @BeforeMethod
+    public void beforeMethod(){
+        System.out.println("Before test execution");
 
-        }
-        
+    }
+
     @Test
-            public void test() {
+    public void test() {
         HomePage homePage = new HomePage(driver);
+        driver.get("http://automationpractice.com/index.php");
         String PriceBeforeRemove = homePage.clickOnTshirts().addProductToCart().continueShopping().addProductToCart()
-                .continueShopping().addProductToCart().continueShopping().addProductToCart().continueShopping().clickOnCart().productpageprice();
+                .continueShopping().addProductToCart().continueShopping().addProductToCart().
+                        continueShopping().clickOnCart().productpageprice();
         System.out.println("cart price before removal of item" + PriceBeforeRemove);
         OrderConfirmationPage productPage = new OrderConfirmationPage(driver);
         productPage.removeItem();
@@ -33,10 +35,10 @@ public class VerifyCartTotalPrice extends BaseTestNGTest {
     }
     @AfterMethod
     public void closingbrowser() {
-            System.out.println("After test execution:");
+        System.out.println("After test execution:");
         driver.quit();
     }
-}//
+}
 
 
 

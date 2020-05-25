@@ -9,6 +9,7 @@ public class ReverseAnArray {
     public void reverse(int a[],int b[],int n) {
             for(int i=n;i>0;i--,j++){
               b[j]=a[i-1];
+
             System.out.print(b[j]+" ");
             }
             }

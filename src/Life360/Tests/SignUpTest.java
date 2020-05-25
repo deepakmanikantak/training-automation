@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
  *
  */
 public class SignUpTest extends BaseTest {
+
     @BeforeMethod
     public void driverInstance() {
         System.out.println("Instantiating the driver");
@@ -21,14 +22,10 @@ public class SignUpTest extends BaseTest {
     public void createAccount() {
         HomePage page = new HomePage(driver);
         page.clickOnSignIn().clickOnRegisterToday().enterFirstName("hello").enterLastName("world").
-                enterValidEmail("geetanjaliguda2008@gmail.com").selectCountry("United States").enterPhoneNumber("2085552761").enterPassword("helloworld").
+                enterValidEmail("geetanjaliguda2008@gmail.com").selectCountry("United States").enterPhoneNumber("12085552761").enterPassword("helloworld").
                 enterConfirmPassword("helloworld").clickOnContinue();
         ApplicationHomePage ap = new ApplicationHomePage(driver);
         Assert.assertTrue(ap.myAccountDropDownSymbolIsDisplayed(), "my account drop down symbol not displayed");
     }
 
-    @AfterMethod
-    public void closeBrowser() {
-        driver.quit();
-    }
 }

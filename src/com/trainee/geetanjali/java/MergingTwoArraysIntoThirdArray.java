@@ -7,6 +7,7 @@ import java.util.Scanner;
 /**
  * This class represents merging of two arrays into third array
  *
+ *
  * @author geetanjali
  */
 public class MergingTwoArraysIntoThirdArray {

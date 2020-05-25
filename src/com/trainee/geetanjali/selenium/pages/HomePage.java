@@ -27,12 +27,6 @@ public class HomePage extends BasePage {
     }
 
     public CategoryPage clickOnTshirts() {
-        Implicitwait(driver);
-        //driver.get("http://automationpractice.com/index.php");
-        // WebElement hoverOnwomen = null;
-        //WebElement clickontshirts = null;
-        // hoverOnwomen = findElement(GlobalVariables.xpath, "//a[@title='Women']");
-        // clickontshirts = findElement(GlobalVariables.xpath, "//a[@title='Women']/..//a[@title='T-shirts']");
 
         Actions action = new Actions(driver);
         action.moveToElement(hoverOnwomen).click(clickontshirts).build().perform();
@@ -47,3 +41,4 @@ public class HomePage extends BasePage {
 
 
 }
+

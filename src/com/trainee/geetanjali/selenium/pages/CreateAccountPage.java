@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 public class CreateAccountPage extends BasePage {
     private WebDriver driver;
     @FindBy(xpath = "//label[@for='id_gender2']")
-    private WebElement clickOnRadioButton;
+    private WebElement RadioButton;
     @FindBy(name = "customer_firstname")
     private WebElement firstName;
     @FindBy(name = "customer_lastname")
@@ -38,7 +38,7 @@ public class CreateAccountPage extends BasePage {
     }
 
     public CreateAccountPage clickOnRadioButton() {
-        clickOnRadioButton.click();
+        RadioButton.click();
         return new CreateAccountPage(driver);
     }
 
@@ -84,7 +84,7 @@ public class CreateAccountPage extends BasePage {
         return new CreateAccountPage(driver);
     }
 
-    public CreateAccountPage enterPhoneNUmber() {
+    public CreateAccountPage enterPhoneNumber() {
         PhoneNumber.sendKeys(GlobalVariables.phonenumber);
         return new CreateAccountPage(driver);
     }
@@ -95,7 +95,6 @@ public class CreateAccountPage extends BasePage {
     }
 
     public CreateAccountPage clickOnCreateAccount() {
-
         register.click();
         return new CreateAccountPage(driver);
     }

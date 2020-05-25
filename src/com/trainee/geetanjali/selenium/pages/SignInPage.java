@@ -11,11 +11,13 @@ public class SignInPage extends BasePage {
     @FindBy(xpath = "//button[@id='SubmitCreate']")
     private WebElement SubmitCreate;
     @FindBy(xpath = "//input[@id='email']")
-    private WebElement signin;
+    private WebElement userName;
     @FindBy(xpath = "//input[@id='passwd']")
-    private WebElement Password;
+    private WebElement PassWord;
     @FindBy(xpath = "//button[@id='SubmitLogin']")
     private WebElement clickOnLogin;
+    @FindBy(xpath="//a[@title='Log in to your customer account']")
+    private WebElement signinIcon;
 
     public SignInPage(WebDriver driver) {
         super(driver);
@@ -32,13 +34,13 @@ public class SignInPage extends BasePage {
         return new CreateAccountPage(driver);
     }
 
-    public SignInPage enterMailToSignin() {
-        signin.sendKeys(GlobalVariables.mailId);
+    public SignInPage enterMailToSignin(String username) {
+        userName.sendKeys(username);
         return new SignInPage(driver);
     }
 
-    public SignInPage enterPasswordToSignin() {
-        Password.sendKeys(GlobalVariables.password);
+    public SignInPage enterPasswordToSignin(String password) {
+        PassWord.sendKeys(password);
         return new SignInPage(driver);
     }
 
@@ -47,6 +49,12 @@ public class SignInPage extends BasePage {
         return new MyAccountPage(driver);
 
     }
+    public boolean verifyIsSignInDisplayed(){
+        return signinIcon.isDisplayed();
+
+    }
+
 
 
 }
+

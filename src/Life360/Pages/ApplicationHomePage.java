@@ -26,10 +26,12 @@ public class ApplicationHomePage extends BasePage {
         super(driver);
         this.driver = driver;
     }
+
     public ApplicationHomePage clickOnAccountOption(){
         myAccountOption.click();
         return new ApplicationHomePage(driver);
     }
+
     public boolean myAccountDropDownSymbolIsDisplayed(){
       return   myAccountOption.isDisplayed();
     }
@@ -37,11 +39,12 @@ public class ApplicationHomePage extends BasePage {
         locationDataPopUp.click();
         return new ApplicationHomePage(driver);
     }
+
     public ApplicationHomePage clickOnSignOut(){
         signOut.click();
         return new ApplicationHomePage(driver);
-
     }
+
     public SignIn confirmSignOut(){
         confirmSignOut.click();
         return new SignIn(driver);

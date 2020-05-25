@@ -14,9 +14,8 @@ public class RemoveDuplicatesInArray extends CommonFunctions {
        }
        a[j++]=a[a.length-1];
        for(int i=0;i<j;i++) {
-            System.out.println(a[i]+" ");
+           System.out.println(a[i] + " ");
        }
-           System.out.println(Arrays.toString(a));
 
     }
     public static void main(String args[]){

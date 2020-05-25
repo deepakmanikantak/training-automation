@@ -1,6 +1,5 @@
 package com.trainee.geetanjali.selenium.pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -59,8 +58,8 @@ public class OrderConfirmationPage extends BasePage {
         return new OrderConfirmationPage(driver);
     }
     public String checkAddtocart(){
-      String cartQuantity=quantity.getText();
-      return "1";
+        String cartQuantity=quantity.getText();
+        return "1";
     }
 
 }

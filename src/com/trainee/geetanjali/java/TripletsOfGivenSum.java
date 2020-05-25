@@ -1,34 +1,34 @@
 package com.trainee.geetanjali.java;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class TripletsOfGivenSum {
-    public void triplets(int a[],int n,int sum){
-        for(int i=0;i<n-2;i++) {
-            for (int j = i + 1; j < n - 1; j++) {
-                for (int k = j + 1; k < n; k++) {
-                    if (a[i] + a[j] + a[k] == sum) {
-                        System.out.println(a[i] + "," + a[j] + "," + a[k]);
-                    }
-                }
-            }
-        }
-    }
     public static void main(String args[]){
         Scanner s= new Scanner(System.in);
         System.out.println("Enter size of array:");
         int n=s.nextInt();
         System.out.println("Enter the sum:");
         int sum=s.nextInt();
-        int a[]= new int[n];
+        Integer a[]= new Integer[n];
         for(int i=0;i<n;i++){
             System.out.println("Enter a["+ i +"]=");
             a[i]=s.nextInt();
-        }System.out.println(Arrays.toString(a));
-        TripletsOfGivenSum t=new TripletsOfGivenSum();
-        t.triplets(a,n,sum);
-
+        }
+        Set<Integer> set=new HashSet<Integer>(Arrays.asList(a));
+        System.out.println("set:"+set);
+        Integer[] array = set.toArray(new Integer[set.size()]);
+        for(int i=0;i<set.size();i++) {
+            for (int j = i + 1; j < set.size() ; j++) {
+                for (int k = j + 1; k < set.size(); k++) {
+                    if (array[i] + array[j] + array[k] == sum) {
+                        System.out.println(array[i] + "," + array[j] + "," + array[k]);
+                    }
+                }
+            }
+        }
 
     }
 }
