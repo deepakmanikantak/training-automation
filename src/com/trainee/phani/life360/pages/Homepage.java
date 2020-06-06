@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Homepage  extends Basepage {
 private WebDriver driver;
-@FindBy(xpath="//div[@class='header__signup']")
+@FindBy(xpath="/html/body/header/div/div[2]/div/a")
 private WebElement clickonsignn;
 @FindBy(id="menu-item-31014")
 private WebElement clickonmemeberstories;
