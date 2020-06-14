@@ -1,5 +1,6 @@
 package com.trainee.phani.life360.pages;
 
+import com.trainee.phani.selinium.pages.Basepage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

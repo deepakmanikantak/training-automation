@@ -21,7 +21,7 @@ public class CommonStaticMethods {
     public static WebDriver driverSelection(String browserName) {
         WebDriver driver = null;
         if (browserName.equalsIgnoreCase("chrome")) {
-            String chromeDriverPath = System.getProperty("user.dir") + "/drivers/chromedriver";
+            String chromeDriverPath = System.getProperty("user.dir") + "/drivers/chromedriver-81.exe";
             System.out.println("ChromeDrive located At Path: " + chromeDriverPath);
             System.setProperty("webdriver.chrome.driver", chromeDriverPath);
             driver = new ChromeDriver();
