@@ -8,19 +8,19 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Signup extends Basepage {
      private WebDriver driver;
-     @FindBy(id="UserFirstName")
+     @FindBy(xpath="//*[@id='UserFirstName']")
      private WebElement firstname;
-     @FindBy(id="UserLastName")
+     @FindBy(xpath="//*[@id='UserLastName']")
      private WebElement lastname;
-     @FindBy(id="UserEmail")
+     @FindBy(xpath="//*[@id='UserEmail']")
      private WebElement emailid;
-     @FindBy(id="mobile-number")
+     @FindBy(xpath="//*[@id='mobile-number']")
      private WebElement mobilenumber;
-     @FindBy(id="UserPassword")
+     @FindBy(xpath="//*[@id='UserPassword']")
      private WebElement password;
-     @FindBy(id="UserPassword")
+     @FindBy(xpath="//*[@id='UserPasswordConfirm']")
      private WebElement confirmpassword;
-     @FindBy(id="doSend")
+     @FindBy(xpath="//*[@id='doSend']")
      private WebElement submit;
     public Signup(WebDriver driver){
         super(driver);
@@ -37,6 +37,7 @@ public class Signup extends Basepage {
         emailid.sendKeys(element);
     }
     public void getmobilenumber(String element){
+        mobilenumber.clear();
         mobilenumber.sendKeys(element);
     }
     public void getpassword(String element){

@@ -4,6 +4,7 @@ import com.trainee.phani.selinium.pages.Basepage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class Login extends Basepage {
     private WebDriver driver;
@@ -13,11 +14,12 @@ public class Login extends Basepage {
     private  WebElement password;
     @FindBy(xpath="//button[@class='btn login']")
     private WebElement singin;
-    @FindBy(linkText = "Not a Life360 user? Register today!")
+    @FindBy(xpath = "//*[@id='content']/div/div/div[2]/p/a")
     private WebElement signup;
     public Login(WebDriver driver){
         super(driver);
         this.driver=driver;
+        PageFactory.initElements(driver,this);
     }
     public void enterphnumber(String element){
         enterphonenumber.sendKeys(element);
