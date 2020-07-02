@@ -1,6 +1,7 @@
 package deepak.selenium.tests;
 
 import deepak.selenium.pages.HomePage;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class RegressionTests {
@@ -27,15 +28,91 @@ public class RegressionTests {
         System.out.println("Executing : beforeMethod");
     }
 
-    @Test
+    @Test(groups = {"smoke"})
     public void a(){
        //Start doing the validations
+        String expectedResult = "MY Store";
+        String actualResult = "Store" ;// homepage.getTitle();
+        Assert.assertEquals(expectedResult,actualResult,"Page title is not matching");
         System.out.println("Executing : homePageTest");
+     //   Assert.assertTrue(homepage.isLogoDisplayed(), "Home Page Logo is not displayed");
+       // Assert.assertTrue( beforePrice > afterPrice, "Home Page Logo is not displayed");
     }
 
-    @Test
+    @Test(groups = {"smoke"})
     public void b(){
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         throw new RuntimeException("Hell");
+//        System.out.println("Executing : homePageNegativeScenarioTest");
+    }
+
+    @Test(groups = {"regression"})
+    public void d(){
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+      //  throw new RuntimeException("Hell");
+//        System.out.println("Executing : homePageNegativeScenarioTest");
+    }
+
+    @Test(groups = {"regression"})
+    public void c(){
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        //throw new RuntimeException("Hell");
+//        System.out.println("Executing : homePageNegativeScenarioTest");
+    }
+
+    @Test(groups = {"regression"})
+    public void e(){
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        //  throw new RuntimeException("Hell");
+//        System.out.println("Executing : homePageNegativeScenarioTest");
+    }
+
+    @Test(groups = {"regression"})
+    public void cf(){
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        //throw new RuntimeException("Hell");
+//        System.out.println("Executing : homePageNegativeScenarioTest");
+    }
+
+    @Test(groups = {"regression"})
+    public void sds(){
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        //  throw new RuntimeException("Hell");
+//        System.out.println("Executing : homePageNegativeScenarioTest");
+    }
+
+    @Test(groups = {"regression"})
+    public void cdasdasd(){
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        //throw new RuntimeException("Hell");
 //        System.out.println("Executing : homePageNegativeScenarioTest");
     }
 

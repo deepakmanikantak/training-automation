@@ -1,7 +1,6 @@
 package com.trainee.aizaz.java;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 /**
  * this class contains program where one element is accepted and
  * found out how many times it has been repeated in the array

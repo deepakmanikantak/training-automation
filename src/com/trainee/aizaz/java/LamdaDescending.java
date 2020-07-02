@@ -19,6 +19,11 @@ public class LamdaDescending {
         al.add(48);
         al.add(100);
         System.out.println(al);
+        /**
+         * here are we are calling descendingLamda method which is CommonMethods class
+         *for complete refernce of documentation refer CommonMethod class
+         */
+
         List<Integer> sort = la.descendingLamda(al);
         System.out.println(sort);
     }

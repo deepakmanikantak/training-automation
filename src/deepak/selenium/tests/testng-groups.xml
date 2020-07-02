@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT"  parallel="methods"   thread-count="3"  name="Testing Groups">
+  <test name="Smoke Test">
+<!--    <groups>-->
+<!--      <run>-->
+<!--        <include name="smoke" />-->
+<!--      </run>-->
+<!--    </groups>-->
+    <classes>
+      <class name="deepak.selenium.tests.RegressionTests"/>
+      <class name="deepak.selenium.tests.CheckoutTests"/>
+    </classes>
+  </test>
+</suite> <!-- Failed suite [Default Suite] -->
