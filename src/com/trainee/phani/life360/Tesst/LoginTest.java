@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
  * 1.user should click on sign in button in home page
  * 2.user should enter phone number and password
  * 3.user should click on sign in button
- * excepted result:After entering ph number and password user should clickon sign in button then user will logged in to life360 account
+ * excepted result:After entering ph number and password user should click on sign in button then user will logged in to life360 account
  *
  * @author Phanindra.k
  */

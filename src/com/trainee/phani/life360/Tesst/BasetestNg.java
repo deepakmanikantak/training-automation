@@ -13,9 +13,9 @@ public class BasetestNg {
     public void driverinitiation() {
         Basetest b = new Basetest();
         driver = b.driver();
-
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get("https://www.life360.com");
+       // driver.get("https://www.life360.com"); production
+        driver.get("https://www.qa.life360.com/homepage/");
     }
 }

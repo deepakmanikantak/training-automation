@@ -30,8 +30,15 @@ public class SignupTest extends BasetestNg{
         Signup s= new Signup(driver);
         s.getfirstname("phanindra");
         s.getlastname("ksst");
-        s.getemailid("pkota+2664@life360.com");
-        s.getmobilenumber("+12085552677");
+        s.getemailid("pkota+2660@life360.com");
+        s.selectCountry();
+        try {
+            Thread.sleep(5000);
+
+            s.getmobilenumber("+2085552660");
+        }catch(Exception e) {
+        }
+
         s.getpassword("life360#");
         s.getconfirmpassword("life360#");
         s.submit();

@@ -8,13 +8,13 @@ import org.openqa.selenium.support.PageFactory;
 public class Myaccount extends Basepage {
      private WebDriver driver;
      @FindBy(xpath="//*[@id='google-map']/div/div[1]")
-    private WebElement accdisplay;
+     private WebElement accdisplay;
      @FindBy(xpath="//*[@id='main']/div[4]/ul/li[2]/a")
      private WebElement message;
      @FindBy(xpath="//*[@id=\"circle-messages\"]/div[2]/form/div/span[2]/img")
      private WebElement clickonindivisualmemeber;
-    @FindBy(xpath="//*[@id='circle-messages']/div[2]/form/textarea")
-    private WebElement clickonmessagebar;
+     @FindBy(xpath="//*[@id='circle-messages']/div[2]/form/textarea")
+     private WebElement clickonmessagebar;
      @FindBy(xpath="//*[@id='circle-messages']/div[2]/form/textarea")
      private WebElement entermessage;
      @FindBy(xpath="//*[@id='circle-messages']/div[2]/form/button")
@@ -135,7 +135,7 @@ public class Myaccount extends Basepage {
     }
     public void clickonaccountsave(){
         javaScriptExecute(clickonaccountsave);
-       // clickonaccountsave.click();
+
     }
 
    public Boolean verifyaccountupdated(){

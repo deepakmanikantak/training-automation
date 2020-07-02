@@ -13,6 +13,8 @@ public class Signup extends Basepage {
      private WebElement lastname;
      @FindBy(xpath="//*[@id='UserEmail']")
      private WebElement emailid;
+    @FindBy(xpath = "//li[@id=\"iti-item-us\"]/span[1]/../../../div")
+    private WebElement countrycode;
      @FindBy(xpath="//*[@id='mobile-number']")
      private WebElement mobilenumber;
      @FindBy(xpath="//*[@id='UserPassword']")
@@ -32,11 +34,16 @@ public class Signup extends Basepage {
     public void getlastname(String element){
         lastname.sendKeys(element);
     }
-    public void getemailid(String element){
+    public void getemailid(String element) {
         emailid.sendKeys(element);
     }
+        public void selectCountry() {
+            countrycode.click();
+        }
     public void getmobilenumber(String element){
+      //  explicitWait(driver,mobilenumber);
         mobilenumber.clear();
+        mobilenumber.click();
         mobilenumber.sendKeys(element);
     }
     public void getpassword(String element){
