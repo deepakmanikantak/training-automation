@@ -6,7 +6,8 @@ import com.trainee.phani.life360.pages.Myaccount;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-/** Test script to verify user able to add palces in there account
+/**
+ *  Test script to verify user able to add palces in there account
  * steps:
  * 1 user should sign in there life 360 account using ph number and password
  * 2 user will click on palces tab

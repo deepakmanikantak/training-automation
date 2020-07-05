@@ -41,17 +41,12 @@ public class Basepage {
 
     /**
      * method for JavaScriptExecutor:
-     * @param element
      */
     public  void javaScriptExecute(WebElement element) {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("arguments[0].click()", element);
     }
 
-    public  void javaScriptExecute1(WebElement element) {
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("arguments[0].getText()", element);
-    }
     /**
      * Explixit wait
      */

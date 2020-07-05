@@ -17,6 +17,8 @@ public class Login extends Basepage {
     private WebElement password;
     @FindBy(id="SubmitLogin")
     private WebElement submitlogin;
+    @FindBy(xpath = "//*[@id='header']/div[2]/div/div/nav/div[1]/a")
+    private WebElement sigindispaly;
 
     public Login(WebDriver driver){
         super(driver);
@@ -28,5 +30,18 @@ public class Login extends Basepage {
         emailenter.sendKeys("phanindraksst@gmail.com");
         createaccountclick.click();
         return new Createaccountpage(driver);
+    }
+    public void getusername(String element){
+        emailsignin.sendKeys(element);
+    }
+    public void getpassword(String element){
+        password.sendKeys(element);
+    }
+    public Youraccount Signin(){
+         submitlogin.click();
+         return new Youraccount(driver);
+    }
+    public boolean displaysigin(){
+        return sigindispaly.isDisplayed();
     }
 }

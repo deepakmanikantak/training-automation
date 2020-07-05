@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 public class SeliniumWebDriver {
     public static void main(String[] args) {
         // Below property gives the path of the project location
-        String chromeDriverPath = System.getProperty("user.dir") + "\\drivers\\chromedriver-81.exe";
+        String chromeDriverPath = System.getProperty("user.dir") + "\\drivers\\chromedriver.exe";
         System.out.println("ChromeDrive located At Path: " + chromeDriverPath);
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         WebDriver driver = new ChromeDriver();
